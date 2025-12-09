@@ -1,0 +1,26 @@
+// src/components/layout/Layout.tsx
+import { Box } from "@mui/material";
+import Sidebar from "./Sidebar";
+import Topbar from "./Topbar";
+import { Outlet } from "react-router-dom";
+
+const Layout = () => {
+  return (
+    <Box sx={{ display: "flex", bgcolor: "#f5f7fa", height: "100vh" }}>
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content Area */}
+      <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
+        <Topbar />
+
+        {/* Pages */}
+        <Box sx={{ p: 3, overflowY: "auto", flexGrow: 1 }}>
+          <Outlet />
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default Layout;

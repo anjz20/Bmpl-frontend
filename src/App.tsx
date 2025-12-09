@@ -1,0 +1,27 @@
+// src/App.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Catalog from "./pages/Dashboard/Catalog";
+import Login from "./pages/Login";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Public Route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected Layout */}
+        <Route element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/catalog" element={<Catalog />} />
+          {/* <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
