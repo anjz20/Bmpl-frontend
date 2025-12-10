@@ -11,14 +11,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 
 import { Link, useLocation } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 
 // Icons (MUI)
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import GridViewIcon from "@mui/icons-material/GridView";
 import WalletIcon from "@mui/icons-material/AccountBalanceWallet";
 // import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
@@ -79,7 +78,7 @@ const menuSections = [
     heading: "CMS, Marketing",
     items: [
       {
-        name: "CMS Marketing Notificaions",
+        name: "CMS Marketing Notification",
         icon: <CampaignIcon />,
         path: "/cms",
       },
@@ -132,15 +131,27 @@ const Sidebar = () => {
           width: isCollapsed ? 70 : 240,
           transition: "0.3s",
           background: "#f7f9fc",
-          borderRight: "1px solid #e6e8ec",
-          overflowX: "hidden",
+          borderRight: "2px solid #e6e8ec",
+          overflowX: "auto", // allow vertical scroll when content exceeds viewport
+          scrollbarWidth: "thin",
+          scrollbarColor: "#c7ccd3 transparent",
+          whiteSpace: "nowrap", // Force one line
+          textOverflow: "ellipsis", // Show "..." if needed
+          lineHeight: "10px",
+          display: "flex",
+          flexDirection: "column",
+          "&::-webkit-scrollbar": { width: 6 },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#c7ccd3",
+            borderRadius: 12,
+          },
         },
       }}
     >
       {/* Collapse Header (ONLY ONCE) */}
       <Box
-        px={2}
-        py={2}
+        px={1}
+        py={1}
         display="flex"
         alignItems="center"
         justifyContent={isCollapsed ? "center" : "space-between"}
@@ -159,7 +170,19 @@ const Sidebar = () => {
       </Box>
 
       {/* Menu List */}
-      <List>
+      <List
+        sx={{
+          flex: 1,
+          overflowY: "auto",
+          overflowX: "auto", // horizontal scroll for long labels/icons
+          pr: isCollapsed ? 0 : 0.5,
+          "&::-webkit-scrollbar": { width: 6, height: 6 },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#c7ccd3",
+            borderRadius: 12,
+          },
+        }}
+      >
         {menuSections.map((section, index) => (
           <Box key={index}>
             {!isCollapsed && (
@@ -167,8 +190,8 @@ const Sidebar = () => {
                 variant="caption"
                 sx={{
                   fontWeight: 600,
-                  px: 1,
-                  mt: 1,
+                  px: 0.5,
+                  mt: 0.5,
                   color: "#7a7f85",
                   textTransform: "uppercase",
                 }}
@@ -184,8 +207,8 @@ const Sidebar = () => {
                   component={Link}
                   to={item.path}
                   sx={{
-                    mx: 1,
-                    mt: 1,
+                    mx: -1,
+                    mt: -1,
                     borderRadius: "10px",
                     background: active ? "#e6f6ee" : "transparent",
                     color: active ? "#0c8b4a" : "#2b2b2b",

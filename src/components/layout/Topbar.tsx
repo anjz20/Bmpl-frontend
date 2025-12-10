@@ -9,7 +9,7 @@ import {
   Menu,
   MenuItem,
   InputBase,
-  Paper
+  Paper,
 } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -34,9 +34,6 @@ const Topbar = () => {
       }}
     >
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
-        
-        
-
         {/* SEARCH BAR */}
         <Paper
           component="form"
@@ -53,10 +50,7 @@ const Topbar = () => {
           }}
         >
           <SearchIcon sx={{ color: "#9a9ea5" }} />
-          <InputBase
-            placeholder="Search"
-            sx={{ ml: 1, flex: 1 }}
-          />
+          <InputBase placeholder="Search" sx={{ ml: 1, flex: 1 }} />
         </Paper>
 
         <Box sx={{ flexGrow: 1 }} />
@@ -109,7 +103,9 @@ const Topbar = () => {
           />
           <Box sx={{ ml: 1 }}>
             <Typography sx={{ fontWeight: 600 }}>Moni Roy</Typography>
-            <Typography sx={{ fontSize: 12, color: "#7a7f85" }}>Admin</Typography>
+            <Typography sx={{ fontSize: 12, color: "#7a7f85" }}>
+              Admin
+            </Typography>
           </Box>
           <KeyboardArrowDownIcon sx={{ ml: 1 }} />
         </Box>
@@ -119,9 +115,15 @@ const Topbar = () => {
           open={Boolean(userMenu)}
           onClose={() => setUserMenu(null)}
         >
-          <MenuItem component={Link} to="/profile">My Profile</MenuItem>
-          <MenuItem component={Link} to="/settings">Settings</MenuItem>
-          <MenuItem component={Link} to="/logout">Logout</MenuItem>
+          <MenuItem component={Link} to="/profile">
+            My Profile
+          </MenuItem>
+          <MenuItem component={Link} to="/settings">
+            Settings
+          </MenuItem>
+          <MenuItem component={Link} to="/logout">
+            Logout
+          </MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>
