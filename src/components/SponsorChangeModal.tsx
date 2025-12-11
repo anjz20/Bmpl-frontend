@@ -66,6 +66,11 @@ const SponsorChangeModal = ({
           placeholder="AG-XXXX"
           value={form.agentId}
           onChange={(event) => handleChange("agentId", event)}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: "8px",
+            },
+          }}
         />
 
         <TextField
@@ -75,6 +80,11 @@ const SponsorChangeModal = ({
           placeholder="AG-XXXX"
           value={form.newSponsorId}
           onChange={(event) => handleChange("newSponsorId", event)}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: "8px",
+            },
+          }}
         />
 
         <TextField
@@ -86,6 +96,11 @@ const SponsorChangeModal = ({
           minRows={3}
           value={form.reason}
           onChange={(event) => handleChange("reason", event)}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: "8px",
+            },
+          }}
         />
       </DialogContent>
       <DialogActions sx={{ px: 3, pb: 2 }}>
@@ -102,7 +117,7 @@ const SponsorChangeModal = ({
         </Button>
         <Button
           variant="contained"
-          sx={{ bgcolor: "#1a73e8", "&:hover": { bgcolor: "#1765c1" } }}
+          sx={{ bgcolor: "#26619A", "&:hover": { bgcolor: "#1765c1" } }}
           onClick={handleSubmit}
         >
           Change Sponsor

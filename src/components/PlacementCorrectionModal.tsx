@@ -60,7 +60,17 @@ const PlacementCorrectionModal = ({
   };
 
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
+    <Dialog
+      open={open}
+      onClose={onClose}
+      fullWidth
+      maxWidth="sm"
+      PaperProps={{
+        sx: {
+          borderRadius: "8px",
+        },
+      }}
+    >
       <DialogTitle>Placement Correction</DialogTitle>
       <DialogContent
         sx={{
@@ -78,6 +88,11 @@ const PlacementCorrectionModal = ({
           placeholder="AG-XXXX"
           value={form.agentId}
           onChange={(event) => handleChange("agentId", event)}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: "8px",
+            },
+          }}
         />
 
         <Typography variant="subtitle2" sx={{ mt: 1, mb: 0.5 }}>
@@ -89,14 +104,26 @@ const PlacementCorrectionModal = ({
             label="Left Leg"
             value={form.newPlacementLeft}
             onChange={(event) => handleChange("newPlacementLeft", event)}
-            sx={{ flex: 1, minWidth: 200 }}
+            sx={{
+              flex: 1,
+              minWidth: 200,
+              "& .MuiOutlinedInput-root": {
+                borderRadius: "8px",
+              },
+            }}
           />
           <TextField
             fullWidth
             label="Right Leg"
             value={form.newPlacementRight}
             onChange={(event) => handleChange("newPlacementRight", event)}
-            sx={{ flex: 1, minWidth: 200 }}
+            sx={{
+              flex: 1,
+              minWidth: 200,
+              "& .MuiOutlinedInput-root": {
+                borderRadius: "8px",
+              },
+            }}
           />
         </Box>
 
@@ -109,15 +136,27 @@ const PlacementCorrectionModal = ({
           minRows={3}
           value={form.reason}
           onChange={(event) => handleChange("reason", event)}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: "8px",
+            },
+          }}
         />
       </DialogContent>
       <DialogActions sx={{ px: 3, pb: 2 }}>
-        <Button onClick={onClose} sx={{ color: "#5f6b7a" }}>
+        <Button
+          onClick={onClose}
+          sx={{ color: "#5f6b7a", borderRadius: "8px" }}
+        >
           Cancel
         </Button>
         <Button
           variant="contained"
-          sx={{ bgcolor: "#1a73e8", "&:hover": { bgcolor: "#1765c1" } }}
+          sx={{
+            bgcolor: "#26619A",
+            "&:hover": { bgcolor: "#1765c1" },
+            borderRadius: "8px",
+          }}
           onClick={handleApply}
         >
           Apply Correction

@@ -257,7 +257,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
         {/* Invoice Content */}
         <Box
           sx={{
-            p: 2,
+            p: 1.5,
             bgcolor: "#ffffff",
             "@media print": {
               p: 2,
@@ -270,8 +270,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-start",
-              mb: 3,
-              pb: 2,
+              mb: 2,
+              pb: 1.5,
               borderBottom: "2px solid #e5e7eb",
             }}
           >
@@ -280,8 +280,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
-                  mb: 2,
+                  gap: 1.5,
+                  mb: 1.5,
                 }}
               >
                 <Box
@@ -289,53 +289,80 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                   src={invoice}
                   alt="Company Logo"
                   sx={{
-                    width: 70,
+                    width: 90,
                     height: "auto",
-                    borderRadius: "8px",
+                    borderRadius: "6px",
                     objectFit: "contain",
                   }}
                 />
 
                 <Box>
                   <Typography
-                    variant="h5"
-                    sx={{ fontWeight: 700, color: "#1f2937", mb: 0.5 }}
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      color: "#1f2937",
+                      mb: 0.25,
+                      fontSize: "1.1rem",
+                    }}
                   >
                     HealthCare Direct
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{ fontSize: "0.75rem" }}
+                  >
                     www.website.com
                   </Typography>
                 </Box>
               </Box>
-              <Box sx={{ mt: 1 }}>
-                <Typography variant="body2" color="text.secondary">
+              <Box sx={{ mt: 0.5 }}>
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{ fontSize: "0.7rem", display: "block", lineHeight: 1.4 }}
+                >
                   Email: info@healthcaredirect.com
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{ fontSize: "0.7rem", display: "block", lineHeight: 1.4 }}
+                >
                   Phone: +91 00000 00000
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="caption"
                   color="text.secondary"
-                  sx={{ mt: 1 }}
+                  sx={{
+                    mt: 0.5,
+                    fontSize: "0.7rem",
+                    display: "block",
+                    lineHeight: 1.4,
+                  }}
                 >
                   123, Business Plaza, MG Road, Bangalore, Karnataka - 560001,
                   India
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{ fontSize: "0.7rem", display: "block", lineHeight: 1.4 }}
+                >
                   GSTIN: 29ABCDE1234F1Z5 | PAN: ABCDE1234F
                 </Typography>
               </Box>
             </Box>
             <Box sx={{ textAlign: "right" }}>
               <Typography
-                variant="h4"
+                variant="h6"
                 sx={{
                   fontWeight: 700,
-                  color: "#1f2937",
-                  mb: 2,
+                  color: "#26619A",
+                  mb: 0,
                   textTransform: "uppercase",
+                  fontSize: "1.25rem",
                 }}
               >
                 TAX INVOICE
@@ -348,54 +375,87 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              mb: 4,
+              mb: 2.5,
               flexWrap: "wrap",
-              gap: 3,
+              gap: 2,
             }}
           >
             <Box>
-              <Typography variant="body2" sx={{ mb: 1 }}>
+              <Typography
+                variant="caption"
+                sx={{ mb: 0.5, fontSize: "0.75rem", display: "block" }}
+              >
                 <strong>Invoice Number:</strong> {invoiceNumber}
               </Typography>
-              <Typography variant="body2" sx={{ mb: 1 }}>
+              <Typography
+                variant="caption"
+                sx={{ mb: 0.5, fontSize: "0.75rem", display: "block" }}
+              >
                 <strong>Order ID:</strong> {orderId}
               </Typography>
-              <Typography variant="body2" sx={{ mb: 1 }}>
+              <Typography
+                variant="caption"
+                sx={{ mb: 0.5, fontSize: "0.75rem", display: "block" }}
+              >
                 <strong>Invoice Date:</strong> {invoiceDate}
               </Typography>
-              <Typography variant="body2">
+              <Typography
+                variant="caption"
+                sx={{ fontSize: "0.75rem", display: "block" }}
+              >
                 <strong>Payment Method:</strong> {paymentMethod}
               </Typography>
             </Box>
             <Box>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{ mb: 0.5, fontSize: "0.75rem", display: "block" }}
+              >
                 <strong>Billed To:</strong>
               </Typography>
-              <Typography variant="body2" sx={{ fontWeight: 600, mb: 0.5 }}>
+              <Typography
+                variant="caption"
+                sx={{
+                  fontWeight: 600,
+                  mb: 0.25,
+                  fontSize: "0.75rem",
+                  display: "block",
+                }}
+              >
                 {customerName}
               </Typography>
               <Typography
-                variant="body2"
+                variant="caption"
                 color="text.secondary"
-                sx={{ mb: 0.5 }}
+                sx={{
+                  mb: 0.25,
+                  fontSize: "0.7rem",
+                  display: "block",
+                  lineHeight: 1.4,
+                }}
               >
                 {customerAddress}
               </Typography>
               <Typography
-                variant="body2"
+                variant="caption"
                 color="text.secondary"
-                sx={{ mb: 0.5 }}
+                sx={{ mb: 0.25, fontSize: "0.7rem", display: "block" }}
               >
                 {customerPhone}
               </Typography>
               <Typography
-                variant="body2"
+                variant="caption"
                 color="text.secondary"
-                sx={{ mb: 0.5 }}
+                sx={{ mb: 0.25, fontSize: "0.7rem", display: "block" }}
               >
                 Agent ID: {agentId}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{ fontSize: "0.7rem", display: "block" }}
+              >
                 Subject: {subject}
               </Typography>
             </Box>
@@ -405,7 +465,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
           <TableContainer
             component={Paper}
             sx={{
-              mb: 3,
+              mb: 2,
               boxShadow: "none",
               border: "1px solid #e5e7eb",
             }}
@@ -417,7 +477,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     sx={{
                       fontWeight: 600,
                       borderRight: "1px solid #e5e7eb",
-                      py: 1.5,
+                      py: 1,
+                      fontSize: "0.7rem",
                     }}
                   >
                     PRODUCT DESCRIPTION
@@ -426,7 +487,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     sx={{
                       fontWeight: 600,
                       borderRight: "1px solid #e5e7eb",
-                      py: 1.5,
+                      py: 1,
+                      fontSize: "0.7rem",
                     }}
                     align="center"
                   >
@@ -436,7 +498,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     sx={{
                       fontWeight: 600,
                       borderRight: "1px solid #e5e7eb",
-                      py: 1.5,
+                      py: 1,
+                      fontSize: "0.7rem",
                     }}
                     align="center"
                   >
@@ -446,7 +509,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     sx={{
                       fontWeight: 600,
                       borderRight: "1px solid #e5e7eb",
-                      py: 1.5,
+                      py: 1,
+                      fontSize: "0.7rem",
                     }}
                     align="center"
                   >
@@ -456,13 +520,17 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     sx={{
                       fontWeight: 600,
                       borderRight: "1px solid #e5e7eb",
-                      py: 1.5,
+                      py: 1,
+                      fontSize: "0.7rem",
                     }}
                     align="right"
                   >
                     RATE
                   </TableCell>
-                  <TableCell sx={{ fontWeight: 600, py: 1.5 }} align="right">
+                  <TableCell
+                    sx={{ fontWeight: 600, py: 1, fontSize: "0.7rem" }}
+                    align="right"
+                  >
                     AMOUNT
                   </TableCell>
                 </TableRow>
@@ -473,20 +541,32 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     <TableCell
                       sx={{
                         borderRight: "1px solid #e5e7eb",
-                        py: 2,
+                        py: 1.25,
                       }}
                     >
-                      <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          fontWeight: 500,
+                          fontSize: "0.75rem",
+                          display: "block",
+                        }}
+                      >
                         {product.name}
                       </Typography>
-                      <Typography variant="caption" color="text.secondary">
+                      <Typography
+                        variant="caption"
+                        color="text.secondary"
+                        sx={{ fontSize: "0.7rem" }}
+                      >
                         SKU: {product.sku}
                       </Typography>
                     </TableCell>
                     <TableCell
                       sx={{
                         borderRight: "1px solid #e5e7eb",
-                        py: 2,
+                        py: 1.25,
+                        fontSize: "0.75rem",
                       }}
                       align="center"
                     >
@@ -495,7 +575,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     <TableCell
                       sx={{
                         borderRight: "1px solid #e5e7eb",
-                        py: 1,
+                        py: 1.25,
+                        fontSize: "0.75rem",
                       }}
                       align="center"
                     >
@@ -504,7 +585,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     <TableCell
                       sx={{
                         borderRight: "1px solid #e5e7eb",
-                        py: 2,
+                        py: 1.25,
+                        fontSize: "0.75rem",
                       }}
                       align="center"
                     >
@@ -513,14 +595,21 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                     <TableCell
                       sx={{
                         borderRight: "1px solid #e5e7eb",
-                        py: 2,
+                        py: 1.25,
+                        fontSize: "0.75rem",
                       }}
                       align="right"
                     >
                       {formatCurrency(product.rate)}
                     </TableCell>
-                    <TableCell sx={{ py: 2 }} align="right">
-                      <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                    <TableCell
+                      sx={{ py: 1.25, fontSize: "0.75rem" }}
+                      align="right"
+                    >
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 500, fontSize: "0.75rem" }}
+                      >
                         {formatCurrency(product.amount)}
                       </Typography>
                     </TableCell>
@@ -531,11 +620,17 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
           </TableContainer>
 
           {/* Payment Information */}
-          <Box sx={{ mb: 3 }}>
-            <Typography variant="body2" sx={{ mb: 1 }}>
+          <Box sx={{ mb: 2 }}>
+            <Typography
+              variant="caption"
+              sx={{ mb: 0.5, fontSize: "0.75rem", display: "block" }}
+            >
               <strong>Payment Method:</strong> {paymentMethod}
             </Typography>
-            <Typography variant="body2">
+            <Typography
+              variant="caption"
+              sx={{ fontSize: "0.75rem", display: "block" }}
+            >
               <strong>Payment Status:</strong> {paymentStatus}
             </Typography>
           </Box>
@@ -545,20 +640,25 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
             sx={{
               display: "flex",
               justifyContent: "flex-end",
-              mb: 3,
+              mb: 2,
             }}
           >
-            <Box sx={{ width: "300px" }}>
+            <Box sx={{ width: "280px" }}>
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1,
+                  py: 0.75,
                   borderBottom: "1px solid #e5e7eb",
                 }}
               >
-                <Typography variant="body2">Subtotal:</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                <Typography variant="caption" sx={{ fontSize: "0.75rem" }}>
+                  Subtotal:
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{ fontWeight: 500, fontSize: "0.75rem" }}
+                >
                   {formatCurrency(subtotal)}
                 </Typography>
               </Box>
@@ -566,14 +666,20 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1,
+                  py: 0.75,
                   borderBottom: "1px solid #e5e7eb",
                 }}
               >
-                <Typography variant="body2">Discount:</Typography>
+                <Typography variant="caption" sx={{ fontSize: "0.75rem" }}>
+                  Discount:
+                </Typography>
                 <Typography
-                  variant="body2"
-                  sx={{ fontWeight: 500, color: "#dc2626" }}
+                  variant="caption"
+                  sx={{
+                    fontWeight: 500,
+                    color: "#dc2626",
+                    fontSize: "0.75rem",
+                  }}
                 >
                   -{formatCurrency(discount)}
                 </Typography>
@@ -582,12 +688,17 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1,
+                  py: 0.75,
                   borderBottom: "1px solid #e5e7eb",
                 }}
               >
-                <Typography variant="body2">Shipping Charges:</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                <Typography variant="caption" sx={{ fontSize: "0.75rem" }}>
+                  Shipping Charges:
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{ fontWeight: 500, fontSize: "0.75rem" }}
+                >
                   {formatCurrency(shippingCharges)}
                 </Typography>
               </Box>
@@ -595,12 +706,17 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1,
+                  py: 0.75,
                   borderBottom: "1px solid #e5e7eb",
                 }}
               >
-                <Typography variant="body2">CGST @ {cgstRate}%:</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                <Typography variant="caption" sx={{ fontSize: "0.75rem" }}>
+                  CGST @ {cgstRate}%:
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{ fontWeight: 500, fontSize: "0.75rem" }}
+                >
                   {formatCurrency(cgst)}
                 </Typography>
               </Box>
@@ -608,13 +724,18 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1,
+                  py: 0.75,
                   borderBottom: "2px solid #1f2937",
-                  mb: 1,
+                  mb: 0.75,
                 }}
               >
-                <Typography variant="body2">SGST @ {sgstRate}%:</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                <Typography variant="caption" sx={{ fontSize: "0.75rem" }}>
+                  SGST @ {sgstRate}%:
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{ fontWeight: 500, fontSize: "0.75rem" }}
+                >
                   {formatCurrency(sgst)}
                 </Typography>
               </Box>
@@ -622,16 +743,22 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  py: 1.5,
+                  py: 1,
                   bgcolor: "#f9fafb",
-                  px: 2,
+                  px: 1.5,
                   borderRadius: "4px",
                 }}
               >
-                <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 700, fontSize: "0.95rem" }}
+                >
                   Grand Total:
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 700, fontSize: "0.95rem" }}
+                >
                   {formatCurrency(grandTotal)}
                 </Typography>
               </Box>
@@ -641,13 +768,16 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
           {/* Amount in Words */}
           <Box
             sx={{
-              mb: 3,
-              p: 2,
+              mb: 2,
+              p: 1.5,
               bgcolor: "#f9fafb",
               borderRadius: "4px",
             }}
           >
-            <Typography variant="body2">
+            <Typography
+              variant="caption"
+              sx={{ fontSize: "0.75rem", lineHeight: 1.5 }}
+            >
               <strong>Amount in Words:</strong> {numberToWords(grandTotal)}
             </Typography>
           </Box>
@@ -655,20 +785,39 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
           {/* BV Information */}
           <Box
             sx={{
-              mb: 3,
-              p: 2,
+              mb: 2,
+              p: 1.5,
               bgcolor: "#eff6ff",
               borderRadius: "4px",
               border: "1px solid #bfdbfe",
             }}
           >
-            <Typography variant="body2" sx={{ fontWeight: 600, mb: 0.5 }}>
+            <Typography
+              variant="caption"
+              sx={{
+                fontWeight: 600,
+                mb: 0.5,
+                fontSize: "0.75rem",
+                display: "block",
+              }}
+            >
               Business Volume (BV) Information
             </Typography>
-            <Typography variant="body2">
+            <Typography
+              variant="caption"
+              sx={{ fontSize: "0.75rem", display: "block" }}
+            >
               Total BV Earned: <strong>{totalBV} BV</strong>
             </Typography>
-            <Typography variant="body2" sx={{ mt: 0.5, fontStyle: "italic" }}>
+            <Typography
+              variant="caption"
+              sx={{
+                mt: 0.5,
+                fontStyle: "italic",
+                fontSize: "0.7rem",
+                display: "block",
+              }}
+            >
               Note: This BV has been credited to your binary tree.
             </Typography>
           </Box>
@@ -676,13 +825,17 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({
           {/* Footer Note */}
           <Box
             sx={{
-              mt: 4,
-              pt: 2,
+              mt: 2.5,
+              pt: 1.5,
               borderTop: "1px solid #e5e7eb",
               textAlign: "center",
             }}
           >
-            <Typography variant="caption" color="text.secondary">
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              sx={{ fontSize: "0.7rem" }}
+            >
               Note: This is a computer-generated invoice and does not require a
               physical signature.
             </Typography>

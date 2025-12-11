@@ -271,24 +271,24 @@ const Order = () => {
                 label="Start Date"
                 type="date"
                 InputLabelProps={{ shrink: true }}
-                sx={{
-                  flex: 1,
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "12px 12px 12px 12px", // your desired radius
-                  },
-                }}
+              sx={{
+                flex: 1,
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
+                },
+              }}
               />
 
               <TextField
                 label="End Date"
                 type="date"
                 InputLabelProps={{ shrink: true }}
-                sx={{
-                  flex: 1,
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "12px 12px 12px 12px", // your desired radius
-                  },
-                }}
+              sx={{
+                flex: 1,
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
+                },
+              }}
               />
             </Box>
           </Box>

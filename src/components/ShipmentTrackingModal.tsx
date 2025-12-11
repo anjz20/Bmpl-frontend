@@ -369,7 +369,7 @@ const ShipmentTrackingModal = ({
               textTransform: "none",
               borderColor: "#e6e8ec",
               color: "#333",
-              borderRadius: "999px", // <-- OVAL SHAPE
+              borderRadius: "8px",
               paddingX: 3,
               "&:hover": {
                 borderColor: "#e6e8ec",
@@ -386,7 +386,7 @@ const ShipmentTrackingModal = ({
             sx={{
               textTransform: "none",
               backgroundColor: "#26619A",
-              borderRadius: "999px", // <-- OVAL SHAPE
+              borderRadius: "8px",
               paddingX: 3,
               "&:hover": {
                 backgroundColor: "#1e4d7a",

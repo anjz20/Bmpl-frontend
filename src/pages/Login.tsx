@@ -96,15 +96,18 @@ const Login = () => {
             sx={{
               "& .MuiOutlinedInput-root": {
                 backgroundColor: "#ffffff",
-                borderRadius: 1,
+                borderRadius: "8px",
                 "& fieldset": {
                   borderColor: "#e0e0e0",
+                  borderRadius: "8px",
                 },
                 "&:hover fieldset": {
                   borderColor: "#bdbdbd",
+                  borderRadius: "8px",
                 },
                 "&.Mui-focused fieldset": {
                   borderColor: "#1976d2",
+                  borderRadius: "8px",
                 },
               },
             }}
@@ -130,15 +133,18 @@ const Login = () => {
             sx={{
               "& .MuiOutlinedInput-root": {
                 backgroundColor: "#ffffff",
-                borderRadius: 1,
+                borderRadius: "8px",
                 "& fieldset": {
                   borderColor: "#e0e0e0",
+                  borderRadius: "8px",
                 },
                 "&:hover fieldset": {
                   borderColor: "#bdbdbd",
+                  borderRadius: "8px",
                 },
                 "&.Mui-focused fieldset": {
                   borderColor: "#1976d2",
+                  borderRadius: "8px",
                 },
               },
             }}

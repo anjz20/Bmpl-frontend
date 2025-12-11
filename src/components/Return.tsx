@@ -222,7 +222,7 @@ const Return = () => {
             sx={{
               flex: 1,
               "& .MuiOutlinedInput-root": {
-                borderRadius: "12px 12px 12px 12px",
+                borderRadius: "8px",
               },
             }}
           />
@@ -234,7 +234,7 @@ const Return = () => {
             sx={{
               flex: 1,
               "& .MuiOutlinedInput-root": {
-                borderRadius: "12px 12px 12px 12px",
+                borderRadius: "8px",
               },
             }}
           />
