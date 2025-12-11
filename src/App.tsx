@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Catalog from "./pages/Dashboard/Catalog";
 import Login from "./pages/Login";
 import Order from "./pages/Orders/Order";
+import GenealogyPlacement from "./pages/Genealogy/GenealogyPlacement";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/orders" element={<Order />} />
+          <Route path="/genealogy" element={<GenealogyPlacement />} />
           {/* <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} /> */}
         </Route>

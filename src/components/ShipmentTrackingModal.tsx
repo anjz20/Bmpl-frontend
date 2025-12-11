@@ -17,6 +17,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import CustomerInfoModal, { type CustomerInfoData } from "./CustomerInfoModal";
+import InvoiceModal from "./DummyInvoiceModal";
 
 interface ShipmentStatus {
   status: string;
@@ -58,6 +59,7 @@ const ShipmentTrackingModal = ({
   order,
 }: ShipmentTrackingModalProps) => {
   const [tabValue, setTabValue] = useState(1); // Start with Shipment Tracking tab
+  const [invoiceOpen, setInvoiceOpen] = useState(false);
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
@@ -380,6 +382,7 @@ const ShipmentTrackingModal = ({
           <Button
             variant="contained"
             startIcon={<DownloadIcon />}
+            onClick={() => setInvoiceOpen(true)}
             sx={{
               textTransform: "none",
               backgroundColor: "#26619A",
@@ -394,6 +397,19 @@ const ShipmentTrackingModal = ({
           </Button>
         </DialogActions>
       )}
+      <InvoiceModal
+        open={invoiceOpen}
+        onClose={() => setInvoiceOpen(false)}
+        orderId={order?.orderId || displayShipment.orderId}
+        invoiceNumber="INV-2025-001234"
+        invoiceDate={order?.date || "01 Aug, 2023"}
+        paymentMethod="UPI"
+        paymentStatus="Paid"
+        customerName={order?.customer || "Rajesh Kumar"}
+        customerAddress="Flat 402, Crystal Plaza, MG Road, Mumbai, Maharashtra - 400001"
+        customerPhone="+91 98765 43210"
+        agentId={order?.agentId || "AGT-1045"}
+      />
     </Dialog>
   );
 };

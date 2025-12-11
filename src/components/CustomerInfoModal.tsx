@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Box, Paper, Typography, Divider, Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
+import InvoiceModal from "./DummyInvoiceModal";
 
 export interface CustomerInfoData {
   name: string;
@@ -22,6 +24,8 @@ const CustomerInfoModal = ({
   onClose?: () => void;
   onDownloadInvoice?: () => void;
 }) => {
+  const [invoiceOpen, setInvoiceOpen] = useState(false);
+
   const displayCustomer: CustomerInfoData = {
     name: customer?.name || "Rajesh Kumar",
     phone: customer?.phone || "+91 98765 43210",
@@ -32,16 +36,6 @@ const CustomerInfoModal = ({
     creditedBV: customer?.creditedBV || "245 BV",
     placementLeg: customer?.placementLeg || "Left Leg",
     ledgerEntry: customer?.ledgerEntry || "LE-ORD-2025-001234",
-  };
-
-  const handleDownloadInvoice = () => {
-    if (onDownloadInvoice) {
-      onDownloadInvoice();
-      return;
-    }
-
-    // Fallback placeholder until wired to backend
-    console.log("Downloading invoice for customer", displayCustomer.name);
   };
 
   return (
@@ -180,7 +174,12 @@ const CustomerInfoModal = ({
         <Button
           variant="contained"
           startIcon={<DownloadIcon />}
-          onClick={handleDownloadInvoice}
+          onClick={() => {
+            if (onDownloadInvoice) {
+              onDownloadInvoice();
+            }
+            setInvoiceOpen(true);
+          }}
           sx={{
             textTransform: "none",
             backgroundColor: "#26619A",
@@ -194,6 +193,19 @@ const CustomerInfoModal = ({
           Download Invoice
         </Button>
       </Box>
+      <InvoiceModal
+        open={invoiceOpen}
+        onClose={() => setInvoiceOpen(false)}
+        orderId={displayCustomer.ledgerEntry || "ORD-2025-001234"}
+        invoiceNumber="INV-2025-001234"
+        invoiceDate="01 Aug, 2023"
+        paymentMethod="UPI"
+        paymentStatus="Paid"
+        customerName={displayCustomer.name}
+        customerAddress="Flat 402, Crystal Plaza, MG Road, Mumbai, Maharashtra - 400001"
+        customerPhone={displayCustomer.phone}
+        agentId={displayCustomer.agentId}
+      />
     </Box>
   );
 };

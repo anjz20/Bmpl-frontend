@@ -9,7 +9,6 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  Divider,
   Chip,
   IconButton,
   Button,
@@ -19,6 +18,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import CustomerInfoModal, { type CustomerInfoData } from "./CustomerInfoModal";
+import InvoiceModal from "./DummyInvoiceModal";
 
 interface OrderData {
   orderId: string;
@@ -58,6 +58,7 @@ const OrderDetailsModal = ({
   order,
 }: OrderDetailsModalProps) => {
   const [tabValue, setTabValue] = useState(0);
+  const [invoiceOpen, setInvoiceOpen] = useState(false);
 
   const defaultShipment: ShipmentData = {
     orderId: order?.orderId || "#ORD-2023-0845",
@@ -446,6 +447,7 @@ const OrderDetailsModal = ({
                 <Button
                   variant="contained"
                   startIcon={<DownloadIcon />}
+                  onClick={() => setInvoiceOpen(true)}
                   sx={{
                     textTransform: "none",
                     backgroundColor: "#26619A",
@@ -654,6 +656,7 @@ const OrderDetailsModal = ({
           <Button
             variant="contained"
             startIcon={<DownloadIcon />}
+            onClick={() => setInvoiceOpen(true)}
             sx={{
               textTransform: "none",
               backgroundColor: "#26619A",
@@ -666,6 +669,19 @@ const OrderDetailsModal = ({
           </Button>
         </DialogActions>
       )}
+      <InvoiceModal
+        open={invoiceOpen}
+        onClose={() => setInvoiceOpen(false)}
+        orderId={order.orderId}
+        invoiceNumber="INV-2025-001234"
+        invoiceDate={order.date}
+        paymentMethod="UPI"
+        paymentStatus="Paid"
+        customerName={order.customer}
+        customerAddress="Flat 402, Crystal Plaza, MG Road, Mumbai, Maharashtra - 400001"
+        customerPhone="+91 98765 43210"
+        agentId={order.agentId}
+      />
     </Dialog>
   );
 };
