@@ -158,7 +158,7 @@ const OrderDetailsModal = ({
           sx={{
             borderBottom: 1,
             borderColor: "#e5e7eb",
-            borderTop: "3px solid #26619A",
+            borderTop: "1px solid #000000",
             backgroundColor: "#ffffff",
           }}
         >
