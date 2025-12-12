@@ -24,8 +24,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import OrderDetailsModal from "../../components/OrderDetailsModal";
-import Return from "../../components/Return";
+import OrderDetailsModal from "./OrderDetailsModal";
+import Return from "./Return";
 import AddIcon from "@mui/icons-material/Add";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";

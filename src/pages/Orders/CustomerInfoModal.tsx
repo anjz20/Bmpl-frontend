@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Box, Paper, Typography, Divider, Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import InvoiceModal from "./DummyInvoiceModal";
-
 export interface CustomerInfoData {
   name: string;
   phone: string;

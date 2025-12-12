@@ -1,11 +1,11 @@
 // src/pages/Dashboard/Dashboard.tsx
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import SalesBVTrend from "../../components/dashboard/SalesBVTrend";
 import AtCapAgents from "../../components/dashboard/AtCapAgents";
 import PendingKYCApprovals from "../../components/dashboard/PendingKYCApprovals";
 import RecentOrders from "../../components/dashboard/RecentOrders";
 import PayoutStatus from "../../components/dashboard/PayoutStatus";
-import Card from "../../components/Card";
+import Card from "./Card";
 const Dashboard = () => {
   return (
     <Box>

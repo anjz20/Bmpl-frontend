@@ -14,7 +14,7 @@ import {
   Paper,
 } from "@mui/material";
 
-import invoice from "../assets/invoice.png";
+import invoice from "../../assets/invoice.png";
 
 interface InvoiceProduct {
   name: string;

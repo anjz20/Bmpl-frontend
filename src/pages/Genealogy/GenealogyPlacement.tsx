@@ -17,8 +17,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutIcon from "@mui/icons-material/ZoomOut";
 import PersonIcon from "@mui/icons-material/Person";
-import PlacementCorrectionModal from "../../components/PlacementCorrectionModal";
-import SponsorChangeModal from "../../components/SponsorChangeModal";
+import PlacementCorrectionModal from "./PlacementCorrectionModal";
+import SponsorChangeModal from "./SponsorChangeModal";
 
 const GenealogyPlacement = () => {
   const [searchQuery, setSearchQuery] = useState("");

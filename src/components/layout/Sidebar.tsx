@@ -59,6 +59,26 @@ const menuSections = [
     ],
   },
   {
+    heading: "Packages & Plans",
+    items: [
+      {
+        name: "Packages & Plans",
+        icon: <LocalActivityIcon />,
+        path: "/packages-plans",
+      },
+    ],
+  },
+  {
+    heading: "BV Income Engine",
+    items: [
+      {
+        name: "BV Income Engine",
+        icon: <LocalActivityIcon />,
+        path: "/bv-income",
+      },
+    ],
+  },
+  {
     heading: "Wallets & Payouts",
     items: [
       { name: "Wallets & Payouts", icon: <WalletIcon />, path: "/income" },
@@ -71,6 +91,16 @@ const menuSections = [
         name: "Rewards  Management",
         icon: <LocalActivityIcon />,
         path: "/rewards",
+      },
+    ],
+  },
+  {
+    heading: "Coins & Coupons",
+    items: [
+      {
+        name: "Coins & Coupons",
+        icon: <LocalActivityIcon />,
+        path: "/coins-coupons",
       },
     ],
   },
