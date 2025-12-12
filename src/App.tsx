@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Order from "./pages/Orders/Order";
 import GenealogyPlacement from "./pages/Genealogy/GenealogyPlacement";
 import BvIncomeEngine from "./pages/BvIncome/BvIncomeEngine";
+import WalletsPayouts from "./pages/WalletsPayouts/WalletsPayouts";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/orders" element={<Order />} />
           <Route path="/genealogy" element={<GenealogyPlacement />} />
           <Route path="/bv-income" element={<BvIncomeEngine />} />
+          <Route path="/income" element={<WalletsPayouts />} />
           {/* <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} /> */}
         </Route>
