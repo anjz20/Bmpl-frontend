@@ -80,106 +80,100 @@ const WalletsPayouts = () => {
                     alignItems: "stretch",
                   }}
                 >
-                  {/* Left Panel - Dates (Light Blue Background) */}
+                  {/* Closing Date Card */}
                   <Box
                     sx={{
                       p: 3,
-                      backgroundColor: "#e3f2fd",
-                      borderRadius: "8px",
+                      backgroundColor: "#f5f5f5",
+                      borderRadius: "12px",
                       display: "flex",
                       flexDirection: "column",
-                      gap: 2.5,
                     }}
                   >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "#26619A", mb: 1, fontWeight: 500 }}
                     >
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "#757575", mb: 0.5, fontWeight: 500 }}
-                      >
-                        Closing Date
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        sx={{ color: "#1a1a1a", fontWeight: 500 }}
-                      >
-                        Tuesday, Oct 29, 2024
-                      </Typography>
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
+                      Closing Date
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ color: "#1a1a1a", fontWeight: 500 }}
                     >
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "#757575", mb: 0.5, fontWeight: 500 }}
-                      >
-                        Payout Date
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        sx={{ color: "#1a1a1a", fontWeight: 500 }}
-                      >
-                        Friday, Nov 01, 2024
-                      </Typography>
-                    </Box>
+                      Tuesday, Oct 29, 2024
+                    </Typography>
                   </Box>
 
-                  {/* Right Panel - Amount and Recipients (Light Green Background) */}
+                  {/* Total Payout Amount Card */}
                   <Box
                     sx={{
                       p: 3,
                       backgroundColor: "#e8f5e9",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                       display: "flex",
                       flexDirection: "column",
-                      gap: 2.5,
                     }}
                   >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "#26619A", mb: 1, fontWeight: 500 }}
                     >
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "#757575", mb: 0.5, fontWeight: 500 }}
-                      >
-                        Total Payout Amount
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        sx={{ color: "#1a1a1a", fontWeight: 600 }}
-                      >
-                        ₹342,100
-                      </Typography>
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
+                      Total Payout Amount
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ color: "#1a1a1a", fontWeight: 500 }}
                     >
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "#757575", mb: 0.5, fontWeight: 500 }}
-                      >
-                        Recipients
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        sx={{ color: "#1a1a1a", fontWeight: 600 }}
-                      >
-                        189 Agents
-                      </Typography>
-                    </Box>
+                      ₹342,100
+                    </Typography>
+                  </Box>
+
+                  {/* Payout Date Card */}
+                  <Box
+                    sx={{
+                      p: 3,
+                      backgroundColor: "#f5f5f5",
+                      borderRadius: "12px",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "#26619A", mb: 1, fontWeight: 500 }}
+                    >
+                      Payout Date
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ color: "#1a1a1a", fontWeight: 500 }}
+                    >
+                      Friday, Nov 01, 2024
+                    </Typography>
+                  </Box>
+
+                  {/* Recipients Card */}
+                  <Box
+                    sx={{
+                      p: 3,
+                      backgroundColor: "#e8f5e9",
+                      borderRadius: "12px",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "#26619A", mb: 1, fontWeight: 500 }}
+                    >
+                      Recipients
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ color: "#1a1a1a", fontWeight: 500 }}
+                    >
+                      189 Agents
+                    </Typography>
                   </Box>
                 </Box>
               </Paper>
@@ -191,7 +185,7 @@ const WalletsPayouts = () => {
                 sx={{
                   display: "grid",
                   gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                  gap: 3,
+                  gap: 4,
                   mb: 3,
                   alignItems: "stretch",
                 }}
@@ -341,7 +335,7 @@ const WalletsPayouts = () => {
                       textTransform: "none",
                       fontWeight: 500,
                       py: 1.25,
-                      mt: "auto",
+                      mt: 2,
                       "&:hover": {
                         backgroundColor: "#45a049",
                       },
@@ -444,7 +438,7 @@ const WalletsPayouts = () => {
                       textTransform: "none",
                       fontWeight: 500,
                       py: 1.25,
-                      mt: "auto",
+                      mt: 2,
                       "&:hover": {
                         backgroundColor: "#45a049",
                       },
@@ -457,13 +451,13 @@ const WalletsPayouts = () => {
             </Container>
 
             {/* Bottom Buttons */}
-            <Container>
+            <Container sx={{ px: 3, py: 2 }}>
               <Box
                 sx={{
                   display: "grid",
                   gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                  gap: 2,
-                  mt: 2,
+                  gap: 3,
+                  mt: 4,
                 }}
               >
                 {/* Preview Payout Run Button */}
