@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import DownloadIcon from "@mui/icons-material/Download";
+import PayoutHistory from "./PayoutHistory";
+import WalletLedgers from "./WalletLedgers";
 
 const WalletsPayouts = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -19,9 +21,9 @@ const WalletsPayouts = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: 3, p: 0 }}>
+    <Box sx={{ p: 1.5, width: "100%", overflowX: "auto" }}>
       {/* Main Content */}
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, minWidth: 0, width: "100%" }}>
         {/* Tabs */}
         <Box sx={{ mb: 3 }}>
           <Tabs
@@ -504,42 +506,11 @@ const WalletsPayouts = () => {
           </>
         )}
 
-        {/* Placeholder for other tabs */}
-        {tabValue === 1 && (
-          <Paper
-            sx={{
-              p: 3,
-              border: "1px solid #e6e8ec",
-              borderRadius: "8px",
-              backgroundColor: "#ffffff",
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 600, color: "#1a1a1a" }}>
-              Payout History
-            </Typography>
-            <Typography variant="body2" sx={{ color: "#757575", mt: 2 }}>
-              Payout history will be displayed here.
-            </Typography>
-          </Paper>
-        )}
+        {/* Payout History Tab */}
+        {tabValue === 1 && <PayoutHistory />}
 
-        {tabValue === 2 && (
-          <Paper
-            sx={{
-              p: 3,
-              border: "1px solid #e6e8ec",
-              borderRadius: "8px",
-              backgroundColor: "#ffffff",
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 600, color: "#1a1a1a" }}>
-              Wallet Ledgers
-            </Typography>
-            <Typography variant="body2" sx={{ color: "#757575", mt: 2 }}>
-              Wallet ledgers will be displayed here.
-            </Typography>
-          </Paper>
-        )}
+        {/* Wallet Ledgers Tab */}
+        {tabValue === 2 && <WalletLedgers />}
       </Box>
     </Box>
   );
