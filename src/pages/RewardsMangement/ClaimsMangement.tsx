@@ -200,18 +200,18 @@ const ClaimsMangement = () => {
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     backgroundColor: "#f7f8fc",
-                    borderRadius: "8px",
+                    borderRadius: "12px",
                     "& fieldset": {
                       borderColor: "#e6e8ec",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                     "&:hover fieldset": {
                       borderColor: "#e6e8ec",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                     "&.Mui-focused fieldset": {
                       borderColor: "#5570f1",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                   },
                 }}
@@ -232,18 +232,18 @@ const ClaimsMangement = () => {
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     backgroundColor: "#f7f8fc",
-                    borderRadius: "8px",
+                    borderRadius: "12px",
                     "& fieldset": {
                       borderColor: "#e6e8ec",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                     "&:hover fieldset": {
                       borderColor: "#e6e8ec",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                     "&.Mui-focused fieldset": {
                       borderColor: "#5570f1",
-                      borderRadius: "8px",
+                      borderRadius: "12px",
                     },
                   },
                 }}
@@ -466,12 +466,14 @@ const ClaimsMangement = () => {
                               size="small"
                               onClick={() => handleApprove(row.claimId)}
                               sx={{
-                                backgroundColor: "#26619A",
-                                color: "#ffffff",
-                                width: 32,
-                                height: 32,
+                                width: 36,
+                                height: 36,
+                                borderRadius: "50%",
+                                backgroundColor: "#eaf2fb",
+                                border: "1px solid #cfe0f5",
+                                color: "#26619A",
                                 "&:hover": {
-                                  backgroundColor: "#1f4d7a",
+                                  backgroundColor: "#dceafb",
                                 },
                               }}
                             >
@@ -481,12 +483,14 @@ const ClaimsMangement = () => {
                               size="small"
                               onClick={() => handleReject(row.claimId)}
                               sx={{
-                                backgroundColor: "#d32f2f",
-                                color: "#ffffff",
-                                width: 32,
-                                height: 32,
+                                width: 36,
+                                height: 36,
+                                borderRadius: "50%",
+                                backgroundColor: "#fdecea",
+                                border: "1px solid #f5c6c3",
+                                color: "#d32f2f",
                                 "&:hover": {
-                                  backgroundColor: "#b71c1c",
+                                  backgroundColor: "#fbdad7",
                                 },
                               }}
                             >
