@@ -165,7 +165,7 @@ const BvIncomeEngine = () => {
             >
               <Typography
                 variant="h6"
-                sx={{ fontWeight: 600, mb: 3, color: "" }}
+                sx={{ fontWeight: 600, mb: 3, color: "#26619A" }}
               >
                 Binary Matching Configuration
               </Typography>
@@ -415,7 +415,7 @@ const BvIncomeEngine = () => {
               <Box sx={{ p: 3, borderBottom: "1px solid #e6e8ec" }}>
                 <Typography
                   variant="h6"
-                  sx={{ fontWeight: 600, color: "#333" }}
+                  sx={{ fontWeight: 600, color: "#26619A" }}
                 >
                   Recent Binary Matching Runs
                 </Typography>
