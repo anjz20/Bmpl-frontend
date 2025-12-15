@@ -160,6 +160,14 @@ const ClaimsMangement = () => {
       color: "#ffffff !important",
       opacity: 1,
     },
+    "&:hover": {
+      color: "#ffffff !important",
+      backgroundColor: "transparent",
+    },
+    "&:hover .MuiTableSortLabel-icon": {
+      color: "#ffffff !important",
+      opacity: 1,
+    },
   };
 
   return (

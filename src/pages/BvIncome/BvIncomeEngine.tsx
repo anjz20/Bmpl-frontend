@@ -108,6 +108,13 @@ const BvIncomeEngine = () => {
       color: "#ffffff !important",
       opacity: 1,
     },
+    "&:hover": {
+      color: "#ffffff !important",
+    },
+    "&:hover .MuiTableSortLabel-icon": {
+      color: "#ffffff !important",
+      opacity: 1,
+    },
   };
 
   return (

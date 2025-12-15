@@ -162,6 +162,14 @@ const Order = () => {
       color: "#ffffff !important",
       opacity: 1, // force both arrows visible
     },
+    "&:hover": {
+      color: "#ffffff !important",
+      backgroundColor: "transparent",
+    },
+    "&:hover .MuiTableSortLabel-icon": {
+      color: "#ffffff !important",
+      opacity: 1,
+    },
   };
 
   return (
